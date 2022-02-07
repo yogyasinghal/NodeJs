@@ -10,10 +10,10 @@ var signupRouter = require('./routes/signup');
 var methodsRouter = require('./routes/methods');
 
 var app = express();
-
+require('dotenv').config();
 const bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb+srv://yogya:marvelmagic@cluster0.ebsn2.mongodb.net/test?retryWrites=true&w=majority';
+var mongoDB = `mongodb+srv://yogya:${process.env.DB_PASS}@cluster0.ebsn2.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

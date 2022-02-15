@@ -10,36 +10,25 @@
 
 <body>
     <div class = "login-box">
-        <form action = "/signup" method = "POST" class = "box">
+        <form action = "/update/<%= id %>" method = "POST" class = "box">
         
-        <h1> User Registration</h1>
+        <h1> User Update</h1>
             <!-- <label for = "name"> Name </label> -->
             <p> Name </p>
             <input type = "text" name = "name" autocomplete="off" placeholder = "Your Name" required/>
             <!-- <label for = "number"> Number </label> -->
-            <p> Email </p>
-            <input type="email" name="email" placeholder="Email" required>
+            <!-- <p> Email </p>
+            <input type="email" name="email" placeholder="Email" required> -->
             <p> Password </p>
             <input type="password" name="password" placeholder="Password" required>
             <p> Admin </p>
             <input type = "text" name = "admin" autocomplete="off" placeholder = "false" required/>
 
-            <div id = "message"> 
-                <%- /* if(msg) {  */ %> 
-                    <% /* console.log("in if  comment signup.ejs",msg) */ %>
-                <% /*  } */ %>
-                <script>
-                    console.log("script",<%=msg%>);
-                    if(<%=msg%>){
-                        // console.log(<%=msg%>); 
-                        alert("user already exist");
-                    } 
-                </script>
-            </div>
+           
 
             <!-- <input type = "submit" name = "submit" value = "Continue"> -->
             <!-- <input type = "submit" name = "submit"> -->
-            <button type = "submit" > Continue </button>
+            <button type = "submit" > Update </button>
         </form>
         </div>
 

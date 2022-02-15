@@ -1,11 +1,56 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document from view folder</title>
+    <title>Assignment 2</title>
+
+    <style>
+        .button {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 3vh;
+        width: 17vw;
+        text-decoration: none;
+        /* height: 25px; */
+        background: #3de709;
+        padding: 1.5vh;
+        text-align: center;
+        border-radius: 44px;
+        color: white;
+        font-size: 2.4vw;
+        }
+
+        h1 {
+            color: forestgreen;
+            padding-top: 10%;
+            font-size: 7vh;
+            padding-bottom: 4%;
+        }
+
+        div {
+            background-color: antiquewhite;
+            height: 100%;
+            justify-content: center;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+
 </head>
-<body>
-    home ejs
+
+<body style="margin: 0;">
+
+    <div>
+        <h1>Welcome User</h1>
+
+        <a class="button" href="/login">Login</a>
+        <a class="button" href="/signup">Sign Up</a>
+        <a class="button" href="/users">Users</a>
+    </div>
+
 </body>
+
 </html>

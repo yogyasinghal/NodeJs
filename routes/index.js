@@ -7,12 +7,11 @@ router.get("/", function (req, res, next) {
   // res.render('index', { title: 'Express' });
   // console.log(req.headers);
   
-  res.send("hello from index.js");
-
-  console.log(req.method);
-  console.log(req.params);
-  console.log(req.query);
-  // res.render('home.ejs');
+  // res.send("hello from index.js");
+  console.log(req.method); 
+  // console.log(req.params); 
+  // console.log(req.query); 
+  res.render('home.ejs');
 });
 router.post("/", (req, res) => {
   console.log("......");

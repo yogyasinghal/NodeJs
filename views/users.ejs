@@ -1,0 +1,76 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data</title>
+
+    <style>
+        .button {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 3vh;
+            width: 11vw;
+            text-decoration: none;
+            /* height: 25px; */
+            background: #3de709;
+            padding: 1vh;
+            text-align: center;
+            border-radius: 44px;
+            color: white;
+            font-size: 1.5vw;
+        }
+
+        h1 {
+            color: forestgreen;
+            /* padding-top: 10%; */
+            font-size: 7vh;
+            /* padding-bottom: 4%; */
+        }
+
+        #main_div {
+            background-color: antiquewhite;
+            height: 100%;
+            justify-content: center;
+            margin: auto;
+            text-align: center;
+        }
+        #users{
+            background-color: rgb(182, 156, 211);
+            /* height: 100%; */
+            justify-content: center;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+
+<body style="margin: 0;">
+    <!-- { _id: new ObjectId("620351ad3b003ce73d1208c1"), 
+        name: 'yogya', 
+        email: 'yogyasinghal21@gmail.com' } 
+    -->
+    <div id = "main_div">
+        <h1>All Userrs</h1>
+        <ul>
+            <% users.forEach(function (user) { %>
+            <div id = "users">
+                <li>
+                    <p><%= user.name %></p>
+                    <p><%= user.email %>  </p>
+                    <!-- <a class="button" href="/delete">delete</a> -->
+                    <a class="button" href="/delete/<%= user.id %>">Delete</a>
+                    <a class="button" href="/update/<%= user.id %>">Update</a>
+                </li>
+            </div>
+            <% }) %>
+        </ul>
+    </div>
+
+</body>
+
+</html>

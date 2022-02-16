@@ -10,7 +10,6 @@ router.get('/', function(req, res, next) {
     res.render('login.ejs');
 
 
-
 //   console.log("from users.js");
 //   res.send('respond with a resource');
 });

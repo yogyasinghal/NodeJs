@@ -7,7 +7,7 @@ const bcrypt = require('bcrypt');
 
 router.get('/', function(req, res, next) {
     console.log("in routs login");
-    res.render('login.ejs');
+    res.render('login.ejs',{msg:0});
 
 
 //   console.log("from users.js");
@@ -22,7 +22,7 @@ router.post('/', function(req, res, next) {
     .exec()
     .then(user=>{
         console.log(user);
-        console.log(req.body.password,user[0].password);
+        // console.log(req.body.password,user[0].password);
         bcrypt.compare(req.body.password,user[0].password,(err,result)=>{
             console.log("inside bcrypt");
             console.log(err,result);
@@ -33,7 +33,10 @@ router.post('/', function(req, res, next) {
             if (result){
                 console.log("success");
                 // res.send("login successfull");
-                res.redirect('/req.body.name');
+                res.redirect('/users');
+            }
+            else{
+                res.render('login.ejs', {msg:1} );
             }
             // res.send("login failed");
         });

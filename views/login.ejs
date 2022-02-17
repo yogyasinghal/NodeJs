@@ -13,7 +13,7 @@
             padding-bottom: 4%;
         }
 
-        div,form {
+        form {
             background-color: antiquewhite;
             height: 100%;
             justify-content: center;
@@ -50,6 +50,14 @@
             <!-- <input type = "submit" name = "submit" value = "Continue"> -->
             <!-- <input type = "submit" name = "submit"> -->
             <button type = "submit" > Continue </button>
+            <div id = "message"> 
+                <script>
+                    if(<%=msg%>){
+                        // console.log(<%=msg%>); 
+                        alert("Incorrect Password");
+                    } 
+                </script>
+            </div>
         </form>
     </div>
 </body>
